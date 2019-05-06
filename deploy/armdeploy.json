@@ -8,7 +8,7 @@
     "hostingPlanName": "[concat('plan-', uniqueString(resourceGroup().id, deployment().name))]",
     "repoURL": "https://github.com/AlexYash/asset-tracking.git",
     "branch": "CosmosDB",
-    "sku": "Free",
+    "sku": "Free F1",
     "workerSize": 0
   },
   "resources": [
