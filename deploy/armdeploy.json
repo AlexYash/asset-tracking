@@ -6,15 +6,15 @@
   "variables": {
     "webAppName": "[concat('web-', uniqueString(resourceGroup().id, deployment().name))]",
     "hostingPlanName": "[concat('plan-', uniqueString(resourceGroup().id, deployment().name))]",
-    "repoURL": "https://github.com/Azure-Architecture-Workshop/asset-tracking.git",
-    "branch": "documentdb",
+    "repoURL": "https://github.com/AlexYash/asset-tracking.git",
+    "branch": "CosmosDB",
     "sku": "Free",
     "workerSize": 0
   },
   "resources": [
     {
       "type": "Microsoft.Web/serverfarms",
-      "apiVersion": "2015-04-01",
+      "apiVersion": "2016-09-01",
       "name": "[variables('hostingPlanName')]",
       "location": "[resourceGroup().location]",
       "properties": {
@@ -26,7 +26,7 @@
       }
     },
     {
-      "apiVersion": "2015-08-01",
+      "apiVersion": "2016-09-01",
       "type": "Microsoft.Web/sites",
       "name": "[variables('webAppName')]",
       "location": "[resourceGroup().location]",
@@ -59,7 +59,7 @@
       ],
       "resources": [
         {
-          "apiVersion": "2015-08-01",
+          "apiVersion": "2016-09-01",
           "name": "web",
           "type": "sourcecontrols",
           "dependsOn": [
