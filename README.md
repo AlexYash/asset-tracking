@@ -1,5 +1,5 @@
 # DAT221x Introduction to NoSQL Data Solutions Lab #2
-This is a fixed code for Microsoft's edX course DAT221x Introduction to NoSQL Data Solutions Lab #2 asset-tracking web app.
+This is a fixed code for Microsoft's edX course DAT221x Introduction to NoSQL Data Solutions (https://www.edx.org/course/introduction-to-nosql-data-solutions-2) Lab #2 asset-tracking web app.
 
 It works being deployed via MS Visual Studio 2019 Communinity Edition but doesn't work being deployed to an existing web app directly
 using Deployment Center.
