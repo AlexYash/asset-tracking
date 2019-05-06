@@ -8,8 +8,6 @@
     "hostingPlanName": "[concat('plan-', uniqueString(resourceGroup().id, deployment().name))]",
     "repoURL": "https://github.com/AlexYash/asset-tracking.git",
     "branch": "CosmosDB",
-    "sku": "Free",
-    "skuCode": "F1",
     "currentStack": "dotnet",
     "netFrameworkVersion": "v4.0",
     "workerSize": 0
@@ -17,19 +15,21 @@
   "resources": [
     {
       "type": "Microsoft.Web/serverfarms",
-      "apiVersion": "2018-02-01",
+      "apiVersion": "2016-09-01",
       "name": "[variables('hostingPlanName')]",
       "location": "[resourceGroup().location]",
       "properties": {
         "name": "[variables('hostingPlanName')]",
-        "sku": "[variables('sku')]",
         "workerSize": "[variables('workerSize')]",
         "hostingEnvironment": "",
         "numberOfWorkers": 1
       },
       "sku": {
-        "Tier": "[variables('sku')]",
-        "Name": "[variables('skuCode')]"
+        "name": "F1",
+        "tier": "Free",
+        "size": "F1",
+        "family": "F",
+        "capacity": 0
       }
     },
     {
