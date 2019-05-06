@@ -6,9 +6,9 @@ This is a fixed code for Microsoft's edX course DAT221x Introduction to NoSQL Da
 
 Deployment using Visual Studio (**documnetdb**, **CosmosDB**):
 1. Open the project in Microsoft Visual Studio.
-2. Publish it to your Azure web app or create a new one (Azure web app F1 free tier should be enough).
+2. Publish it to your Azure web app or create a new one (Azure App ASP-CosmosDB-b401 (F1: Free) service plan should be enough).
 3. Open the web app via a link in the Owerview section.
 
 Deployment using Azure App services Deployment center (**CosmosDB** only):
-1. Create an empty App service instance using Azure portal - https://docs.microsoft.com/en-us/azure/app-service/ (F1 free instance for development is fine).
+1. Create an empty App service instance using Azure portal - https://docs.microsoft.com/en-us/azure/app-service/ (Azure App ASP-CosmosDB-b401 (F1: Free) service plan should be enough).
 2. Configure continuous deployment with GitHub via Deployment Center - https://docs.microsoft.com/en-us/azure/app-service/deploy-continuous-deployment#deploy-continuously-from-github
