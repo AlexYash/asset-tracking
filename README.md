@@ -4,7 +4,7 @@ This is a fixed code for Microsoft's edX course DAT221x Introduction to NoSQL Da
 It works being deployed via MS Visual Studio 2019 Communinity Edition but doesn't work being deployed to an existing web app directly
 using Deployment Center.
 
-Use **documnetdb** branch not CosmosDB, the latter is experimental.
+**documnetdb** branch is build as the original project on *.NET Framework 4.6.2* and **CosmosDB** is build *.NET Framework 4.7.2.*
 
 Deployment guide:
 1. Open the project in Microsoft Visual Studio.
