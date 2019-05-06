@@ -2,7 +2,7 @@
 This is a fixed code for Microsoft's edX course DAT221x Introduction to NoSQL Data Solutions Lab #2 asset-tracking web app.
 
 It works being deployed via MS Visual Studio 2019 Communinity Edition but doesn't work being deployed to an existing web app directly
-via Deployment Center.
+using Deployment Center.
 
 Deployment guide:
 1. Open the project in Microsoft Visual Studio.
