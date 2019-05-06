@@ -10,5 +10,5 @@ Deployment using Visual Studio (**documnetdb**, **CosmosDB**):
 3. Open the web app via a link in an Owerview section.
 
 Deployment using Azure App services Deployment center (**CosmosDB** only):
-1. Create empty App service instance using Azure portal - https://docs.microsoft.com/en-us/azure/app-service/ (F1 free instance for development is fine).
+1. Create an empty App service instance using Azure portal - https://docs.microsoft.com/en-us/azure/app-service/ (F1 free instance for development is fine).
 2. Configure continuous deployment with GitHub via Deployment Center - https://docs.microsoft.com/en-us/azure/app-service/deploy-continuous-deployment#deploy-continuously-from-github
