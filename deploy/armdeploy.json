@@ -9,12 +9,15 @@
     "repoURL": "https://github.com/AlexYash/asset-tracking.git",
     "branch": "CosmosDB",
     "sku": "Free",
+    "skuCode": "F1",
+    "currentStack": "dotnet",
+    "netFrameworkVersion": "v4.0",
     "workerSize": 0
   },
   "resources": [
     {
       "type": "Microsoft.Web/serverfarms",
-      "apiVersion": "2015-08-01",
+      "apiVersion": "2018-02-01",
       "name": "[variables('hostingPlanName')]",
       "location": "[resourceGroup().location]",
       "properties": {
@@ -23,10 +26,14 @@
         "workerSize": "[variables('workerSize')]",
         "hostingEnvironment": "",
         "numberOfWorkers": 1
+      },
+      "sku": {
+        "Tier": "[variables('sku')]",
+        "Name": "[variables('skuCode')]"
       }
     },
     {
-      "apiVersion": "2015-08-01",
+      "apiVersion": "2018-02-01",
       "type": "Microsoft.Web/sites",
       "name": "[variables('webAppName')]",
       "location": "[resourceGroup().location]",
@@ -50,8 +57,15 @@
             {
               "Name": "DOCUMENTDB_Collection",
               "Value": ""
+            },
+          ],
+          "metadata": [
+            {
+                "name": "CURRENT_STACK",
+                "value": "[variables('currentStack')]"
             }
-          ]
+          ],
+          "netFrameworkVersion": "[variables('netFrameworkVersion')]"
         }
       },
       "dependsOn": [
@@ -59,7 +73,7 @@
       ],
       "resources": [
         {
-          "apiVersion": "2015-08-01",
+          "apiVersion": "2018-02-01",
           "name": "web",
           "type": "sourcecontrols",
           "dependsOn": [
